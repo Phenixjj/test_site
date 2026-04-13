@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Arcane Archives | Level Up Your Legend</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#ffffff",
+                        "on-secondary": "#3d0047",
+                        "inverse-primary": "#6834eb",
+                        "error-dim": "#d73357",
+                        "error": "#ff6e84",
+                        "background": "#0e0e0e",
+                        "surface-container-high": "#20201f",
+                        "tertiary-container": "#daeef9",
+                        "outline": "#767575",
+                        "on-primary-fixed": "#000000",
+                        "on-tertiary-container": "#465a62",
+                        "on-error-container": "#ffb2b9",
+                        "on-tertiary": "#4f626b",
+                        "tertiary-dim": "#d1e6f0",
+                        "on-tertiary-fixed-variant": "#546770",
+                        "surface-container-low": "#131313",
+                        "on-error": "#490013",
+                        "on-primary-fixed-variant": "#32008a",
+                        "surface": "#0e0e0e",
+                        "outline-variant": "#484847",
+                        "on-surface-variant": "#adaaaa",
+                        "primary": "#b6a0ff",
+                        "secondary": "#eb65ff",
+                        "on-background": "#ffffff",
+                        "on-secondary-container": "#fff5fa",
+                        "primary-fixed": "#a98fff",
+                        "surface-container": "#1a1a1a",
+                        "primary-container": "#a98fff",
+                        "surface-container-highest": "#262626",
+                        "on-secondary-fixed-variant": "#8b00a2",
+                        "secondary-fixed-dim": "#f9a7ff",
+                        "surface-container-lowest": "#000000",
+                        "inverse-surface": "#fcf9f8",
+                        "tertiary-fixed": "#dff4ff",
+                        "inverse-on-surface": "#565555",
+                        "on-tertiary-fixed": "#384b53",
+                        "surface-dim": "#0e0e0e",
+                        "primary-dim": "#7e51ff",
+                        "secondary-fixed": "#fcbcff",
+                        "tertiary": "#f3faff",
+                        "secondary-container": "#a200bb",
+                        "surface-tint": "#b6a0ff",
+                        "surface-variant": "#262626",
+                        "on-primary-container": "#280072",
+                        "on-secondary-fixed": "#5d006d",
+                        "primary-fixed-dim": "#9c7eff",
+                        "error-container": "#a70138",
+                        "surface-bright": "#2c2c2c",
+                        "on-primary": "#340090",
+                        "tertiary-fixed-dim": "#d1e6f0",
+                        "secondary-dim": "#eb65ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .wix-card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .wix-card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(182, 160, 255, 0.15);
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(182, 160, 255, 0.2), transparent);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary selection:text-on-secondary">
+    <header
+        class="bg-background/80 backdrop-blur-xl text-[#b6a0ff] docked full-width top-0 z-50 sticky border-b border-primary/10">
+        <div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-2xl font-headline font-bold italic tracking-tighter text-[#b6a0ff]">
+                Arcane Archives
+            </div>
+            <nav class="hidden md:flex items-center gap-10 font-body text-sm font-medium">
+                <a class="text-[#b6a0ff]/70 hover:text-[#b6a0ff] transition-colors" href="#">Artifacts</a>
+                <a class="text-[#b6a0ff]/70 hover:text-[#b6a0ff] transition-colors" href="#">Tombs</a>
+                <a class="text-[#b6a0ff]/70 hover:text-[#b6a0ff] transition-colors" href="#">Cartography</a>
+                <a class="text-[#b6a0ff]/70 hover:text-[#b6a0ff] transition-colors" href="#">Gems</a>
+                <a class="text-[#b6a0ff]/70 hover:text-[#b6a0ff] transition-colors" href="#">Quest Boards</a>
+            </nav>
+            <div class="flex items-center gap-6">
+                <button
+                    class="bg-primary text-on-primary font-bold py-2.5 px-8 rounded-full hover:bg-primary-dim transition-all duration-300">
+                    Join the Party
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="relative min-h-[85vh] flex items-center overflow-hidden bg-background">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] animate-pulse">
+                </div>
+                <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[120px] animate-pulse"
+                    style="animation-delay: 2s"></div>
+            </div>
+            <div
+                class="max-w-7xl mx-auto w-full px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+                <div class="space-y-10">
+                    <div class="flex items-center gap-3">
+                        <span class="h-[1px] w-8 bg-primary"></span>
+                        <span class="text-primary text-xs font-bold tracking-[0.3em] uppercase">Forged in Shadow</span>
+                    </div>
+                    <h1 class="font-headline italic text-7xl md:text-8xl text-on-surface leading-none tracking-tight">
+                        Level Up <br /> <span class="text-primary">Your Legend</span>
+                    </h1>
+                    <p class="text-xl text-on-surface-variant max-w-lg leading-relaxed font-light">
+                        The ultimate treasury for Dungeon Masters and daring adventurers. Procure legendary artifacts
+                        for your next epic campaign.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-5 pt-4">
+                        <button
+                            class="bg-primary text-on-primary font-bold text-lg py-5 px-12 rounded-xl hover:shadow-[0_10px_30px_rgba(182,160,255,0.3)] transition-all duration-300">
+                            Explore the Vault
+                        </button>
+                        <button
+                            class="flex items-center justify-center gap-3 text-on-surface font-bold text-lg py-5 px-12 rounded-xl border border-outline-variant hover:bg-surface-container transition-all duration-300">
+                            View Collections
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="relative flex justify-center lg:justify-end">
+                    <div
+                        class="relative w-full max-w-lg aspect-square bg-surface-container rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/30">
+                        <img alt="Arcane Grimoire"
+                            class="w-full h-full object-cover transition-transform duration-1000 hover:scale-110"
+                            src="https://lh3.googleusercontent.com/aida/ADBb0uhkGplMWeldR2QUzjtNlgkUeP1BBNJ97dxiCZQn83joDsJkN1-YJy6jHjaKnpX2iz-FnNW8H3CDJS-pZ1o5NpV7RVKlVfy7Vul4b1nCW1jrAH8t82QfVU61h07qODaSFkXzT_Z26DKifcOcmJDDxoi-g8Y2ybjzw1TBeuFpbFyNfKatwUi-qbT8S0to1o39_n8Ed2v9rfvtR8X8A29QAFa8fX399MvcKD1oiXa1yUvOZmNXHwDo5GSzpv5OjbszDNgLldhMQORwfbs" />
+                        <div
+                            class="absolute bottom-6 left-6 right-6 p-6 glass-panel rounded-2xl border border-white/10 flex justify-between items-center backdrop-blur-md">
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-primary font-bold mb-1">Current Feature
+                                </p>
+                                <p class="text-lg font-headline italic">The Archivist's Grimoire</p>
+                            </div>
+                            <span class="material-symbols-outlined text-3xl text-white/50"
+                                data-icon="auto_stories">auto_stories</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="section-divider"></div>
+        <section class="py-32 px-8 bg-surface-container-lowest">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-24 space-y-6">
+                    <h2 class="font-headline italic text-5xl text-on-surface">Featured Artifacts</h2>
+                    <p class="text-on-surface-variant max-w-2xl mx-auto text-lg font-light">Curated rarities forged in
+                        the fires of imagination and high-level spellcasting, ready to grace your gaming table.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div
+                        class="group wix-card-hover bg-surface-container border border-outline-variant/30 rounded-3xl overflow-hidden">
+                        <div class="aspect-[4/3] overflow-hidden relative">
+                            <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                                data-alt="Galaxy pattern dice"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe2cEmjn6nTt5u-tVHW9T0FvkrlXlayB6-zQ0wqOj_34IPRXhdGeUgfy294C6f6HbtQO_qdZBJVvrOEAyvR4MoFbLsyoNkppJb_2ngoeA2jyjzQEjg3afIimYITroHTZo2pYE8G5Rmz3V0Kc16gIOfdVoOWQ9YYjK9vnKLoMvlha31kIKdehDfxYz6oRX5Ha5cnOcHdF7K3vKDY6RTsKpU1qVRhNHzj1apPHUFnOvamjPeElfGocowWyiUsb0PGCtOcrJ8JWHEROKO" />
+                        </div>
+                        <div class="p-10 space-y-4">
+                            <h3 class="font-headline text-3xl italic">Mystic Dice Sets</h3>
+                            <p class="text-on-surface-variant text-sm leading-relaxed">Infused with chronomancy to
+                                ensure your critical hits land when destiny demands.</p>
+                            <div class="flex items-center justify-between pt-6 border-t border-outline-variant/20">
+                                <span class="text-primary font-bold text-xl">45.00 GP</span>
+                                <button
+                                    class="p-3 bg-surface-container-high rounded-full hover:bg-primary hover:text-on-primary transition-colors">
+                                    <span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group wix-card-hover bg-surface-container border border-outline-variant/30 rounded-3xl overflow-hidden">
+                        <div class="aspect-[4/3] overflow-hidden relative">
+                            <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                                data-alt="Fantasy world map"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOobBd3zutCfcIqKeKKJezUbSA38QnCJLTfROHmsfbJ2Dt1y_37sfpyV7xA1Xq7eztWXIYl3A8MliXU0d3OnIskA4U4lu-incWYK9wc_ssAwojw0AJ963XBkESabTL96JgCf-izHlpbkH9U9ihYkjmvx7zK7NETT8JFlRH6FNmXlXVv4k7t8yVW8TbqxFNaDno8wjUvJ9da7yxJKm9y8oQaeRen4uLQOdsOj46q5mv5f6vcx1jVMDj5jgGi9B7iFYhU3JdI0W-Ks3G" />
+                        </div>
+                        <div class="p-10 space-y-4">
+                            <h3 class="font-headline text-3xl italic">Hand-Drawn Maps</h3>
+                            <p class="text-on-surface-variant text-sm leading-relaxed">Cartography of lost realms and
+                                forbidden dungeons, rendered in exquisite detail.</p>
+                            <div class="flex items-center justify-between pt-6 border-t border-outline-variant/20">
+                                <span class="text-primary font-bold text-xl">120.00 GP</span>
+                                <button
+                                    class="p-3 bg-surface-container-high rounded-full hover:bg-primary hover:text-on-primary transition-colors">
+                                    <span class="material-symbols-outlined" data-icon="map">map</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group wix-card-hover bg-surface-container border border-outline-variant/30 rounded-3xl overflow-hidden">
+                        <div class="aspect-[4/3] overflow-hidden relative">
+                            <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                                data-alt="Ancient book"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdaCevunhvifL2DCrVZujjkKEcl_z09ijK2EJVb63dBeTnQgmsaskD7VTdJuIDe_8B3GwKzY20QP44mFje-L4b_N_iu-SdVtzOk2L8W2OpQa12AulRBDbed5R3-ZKx1Ggf-Bg9nBDiASkWUma5KG5tQeHp5YawjMYahQr9Y6XoeOdFzcsrHIbuKttJHn-M9p7-ZN3Fv1mDIZJEOddjEVzFckBXsUfSaHhLcxl_icZkSH8ZhFMhaJBQmfdsEPkXrjnLfxmdFfZA-gEQ" />
+                        </div>
+                        <div class="p-10 space-y-4">
+                            <h3 class="font-headline text-3xl italic">Legendary Tomes</h3>
+                            <p class="text-on-surface-variant text-sm leading-relaxed">Vault-preserved scrolls and
+                                compendiums containing forbidden spells and ancient lore.</p>
+                            <div class="flex items-center justify-between pt-6 border-t border-outline-variant/20">
+                                <span class="text-primary font-bold text-xl">299.00 GP</span>
+                                <button
+                                    class="p-3 bg-surface-container-high rounded-full hover:bg-primary hover:text-on-primary transition-colors">
+                                    <span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="section-divider"></div>
+        <section class="py-32 px-8 bg-surface-container-low">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                <div class="order-2 lg:order-1 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div
+                        class="p-10 bg-background border border-outline-variant/20 rounded-[2.5rem] space-y-6 wix-card-hover">
+                        <div class="w-14 h-14 bg-secondary/10 flex items-center justify-center rounded-2xl">
+                            <span class="material-symbols-outlined text-secondary text-3xl"
+                                data-icon="groups">groups</span>
+                        </div>
+                        <h4 class="font-headline text-2xl italic">NPC Generators</h4>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">Create complex personalities and deep
+                            backstories with a single magical tap.</p>
+                    </div>
+                    <div
+                        class="p-10 bg-background border border-outline-variant/20 rounded-[2.5rem] space-y-6 wix-card-hover sm:translate-y-12">
+                        <div class="w-14 h-14 bg-primary/10 flex items-center justify-center rounded-2xl">
+                            <span class="material-symbols-outlined text-primary text-3xl"
+                                data-icon="dashboard_customize">dashboard_customize</span>
+                        </div>
+                        <h4 class="font-headline text-2xl italic">Campaign Logic</h4>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">Keep track of every choice,
+                            consequence, and character arc in real-time.</p>
+                    </div>
+                    <div
+                        class="p-10 bg-background border border-outline-variant/20 rounded-[2.5rem] space-y-6 wix-card-hover">
+                        <div class="w-14 h-14 bg-primary/10 flex items-center justify-center rounded-2xl">
+                            <span class="material-symbols-outlined text-primary text-3xl" data-icon="token">token</span>
+                        </div>
+                        <h4 class="font-headline text-2xl italic">Token Vault</h4>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">Access thousands of HD digital tokens
+                            for your virtual table-tops.</p>
+                    </div>
+                    <div
+                        class="p-10 bg-background border border-outline-variant/20 rounded-[2.5rem] space-y-6 wix-card-hover sm:translate-y-12">
+                        <div class="w-14 h-14 bg-secondary/10 flex items-center justify-center rounded-2xl">
+                            <span class="material-symbols-outlined text-secondary text-3xl"
+                                data-icon="history_edu">history_edu</span>
+                        </div>
+                        <h4 class="font-headline text-2xl italic">Lore Weaver</h4>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">AI-assisted world-building tools that
+                            expand your setting's deep mythos.</p>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 space-y-8">
+                    <h2 class="font-headline italic text-6xl text-on-surface leading-tight">For the Masters <br /> of
+                        the Game</h2>
+                    <p class="text-xl text-on-surface-variant leading-relaxed font-light">
+                        Weaving a narrative requires more than just luck. Our specialized GM tools provide the
+                        mechanical skeleton so your story can take flight. From campaign managers to dynamic encounter
+                        generators, we arm the Master.
+                    </p>
+                    <button
+                        class="flex items-center gap-4 text-primary font-bold uppercase tracking-widest text-sm group">
+                        Unleash your creativity
+                        <span class="h-[1px] w-12 bg-primary group-hover:w-20 transition-all"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <div class="section-divider"></div>
+        <section class="py-32 px-8 bg-background">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-20">
+                    <h2 class="font-headline italic text-4xl mb-4">Heard in the Taverns</h2>
+                    <p class="text-on-surface-variant uppercase tracking-widest text-xs">Testimonials from across the
+                        realms</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div
+                        class="p-10 bg-surface-container rounded-3xl border border-outline-variant/20 italic font-light relative">
+                        <span class="material-symbols-outlined text-primary/20 text-6xl absolute top-6 right-6"
+                            data-icon="format_quote">format_quote</span>
+                        <p class="text-lg leading-relaxed mb-8">"The campaign logic tool saved my session from a total
+                            party wipe. Best gold I've ever spent."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-surface-container-highest"></div>
+                            <div>
+                                <p class="font-bold text-sm not-italic">Elara Shadowstep</p>
+                                <p class="text-xs text-on-surface-variant not-italic">Level 12 Rogue</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="p-10 bg-surface-container rounded-3xl border border-outline-variant/20 italic font-light relative">
+                        <span class="material-symbols-outlined text-primary/20 text-6xl absolute top-6 right-6"
+                            data-icon="format_quote">format_quote</span>
+                        <p class="text-lg leading-relaxed mb-8">"Their battlemaps are so detailed, my players actually
+                            stopped arguing to admire the terrain."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-surface-container-highest"></div>
+                            <div>
+                                <p class="font-bold text-sm not-italic">Brog the Brave</p>
+                                <p class="text-xs text-on-surface-variant not-italic">Forever DM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="p-10 bg-surface-container rounded-3xl border border-outline-variant/20 italic font-light relative">
+                        <span class="material-symbols-outlined text-primary/20 text-6xl absolute top-6 right-6"
+                            data-icon="format_quote">format_quote</span>
+                        <p class="text-lg leading-relaxed mb-8">"The NPC generator gave my shopkeeper a backstory so sad
+                            my players gave him all their gold."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-surface-container-highest"></div>
+                            <div>
+                                <p class="font-bold text-sm not-italic">Meldar Highstaff</p>
+                                <p class="text-xs text-on-surface-variant not-italic">Archmage</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-32 px-8">
+            <div
+                class="max-w-5xl mx-auto bg-surface-container-high rounded-[3rem] p-16 md:p-24 text-center relative overflow-hidden border border-primary/10">
+                <div class="absolute inset-0 z-0 opacity-10 pointer-events-none"
+                    style="background-image: radial-gradient(circle at center, #b6a0ff 0%, transparent 70%);"></div>
+                <div class="max-w-2xl mx-auto space-y-10 relative z-10">
+                    <span class="material-symbols-outlined text-6xl text-primary" data-icon="fort">fort</span>
+                    <h2 class="font-headline italic text-5xl text-on-surface">Join the Guild</h2>
+                    <p class="text-on-surface-variant text-lg font-light leading-relaxed">Receive secret scrolls, early
+                        access to artifacts, and invitations to exclusive questing events across the realms.</p>
+                    <form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto pt-4" onsubmit="return false;">
+                        <input
+                            class="flex-grow bg-background border-outline-variant/30 border rounded-2xl px-8 py-5 focus:ring-2 focus:ring-primary text-on-surface outline-none"
+                            placeholder="Your scroll address..." type="email" />
+                        <button
+                            class="bg-primary text-on-primary font-bold py-5 px-10 rounded-2xl hover:bg-primary-dim transition-all duration-300 whitespace-nowrap shadow-xl">
+                            Join the Party
+                        </button>
+                    </form>
+                    <p class="text-xs text-on-surface-variant/60 uppercase tracking-widest">No mimics or spam, we
+                        promise by the ancient codes.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-surface-container-lowest text-[#b6a0ff] full-width py-20 border-t border-primary/10">
+        <div class="max-w-7xl mx-auto px-8 flex flex-col items-center gap-10 text-center">
+            <div class="text-3xl font-headline italic text-[#a98fff]">Arcane Archives</div>
+            <nav class="flex flex-wrap justify-center gap-12 text-sm font-medium tracking-wide">
+                <a class="text-[#b6a0ff]/70 hover:text-[#b6a0ff] transition-colors" href="#">The Guild Code</a>
+                <a class="text-[#b6a0ff]/70 hover:text-[#b6a0ff] transition-colors" href="#">Merchant Portal</a>
+                <a class="text-[#b6a0ff]/70 hover:text-[#b6a0ff] transition-colors" href="#">Sacred Privacy</a>
+                <a class="text-[#b6a0ff]/70 hover:text-[#b6a0ff] transition-colors" href="#">Summon Support</a>
+            </nav>
+            <div class="flex gap-8 border-y border-primary/10 py-8 w-full justify-center">
+                <span
+                    class="material-symbols-outlined text-2xl opacity-60 hover:opacity-100 transition-opacity cursor-pointer"
+                    data-icon="castle">castle</span>
+                <span
+                    class="material-symbols-outlined text-2xl opacity-60 hover:opacity-100 transition-opacity cursor-pointer"
+                    data-icon="shield">shield</span>
+                <span
+                    class="material-symbols-outlined text-2xl opacity-60 hover:opacity-100 transition-opacity cursor-pointer"
+                    data-icon="swords">swords</span>
+            </div>
+            <div class="text-gray-600 text-[10px] tracking-[0.4em] uppercase">
+                © 2024 Arcane Archives. All scrolls reserved in all dimensions.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
